@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Unit tests covering provider usage, runtime flag updates, nested `<Feature />`, async loading/error state, missing-flag warning, and provider guard.
 - Public type tests with `tsd`.
 - Vite playground example in `playground/example` for interactive local testing.
-- GitHub Actions CI with Node 18/20/22 matrix, lint/type checks, package dry-run, and production dependency audit.
+- GitHub Actions CI with Node 20/22 matrix, lint/type checks, package dry-run, and production dependency audit.
 - Automated release workflow with Changesets (`changeset`, version PR, publish).
 - Build clean step (`npm run clean`) before bundling.
 - Documentation updates with design decisions, SSR/hydration notes, migration guide, and FAQ.
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project upgraded to React `19.2.x` with aligned ecosystem dependencies.
 - `peerDependencies` requiring React `>=19.2.0 <20`.
 - React moved to peer + dev dependencies (no runtime dependency duplication).
-- Package hardening: `sideEffects: false`, `engines.node >= 18`, improved keywords, and pack checks.
+- Package hardening: `sideEffects: false`, `engines.node >= 20`, improved keywords, and pack checks.
 - TypeScript build excluding test declaration output (`src/**/*.test.ts(x)`).
 - ESLint and Prettier configuration.
 - MIT License.
