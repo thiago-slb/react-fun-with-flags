@@ -2,9 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
-import type { RollupOptions } from 'rollup';
 
-const config: RollupOptions[] = [
+const config = [
   {
     input: 'src/index.ts',
     external: ['react', 'react-dom'],
