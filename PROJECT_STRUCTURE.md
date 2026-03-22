@@ -25,7 +25,7 @@ react-fun-with-flags/
 │   ├── ci.yml
 │   └── release.yml
 ├── package.json
-├── rollup.config.ts
+├── rollup.config.mjs
 ├── tsconfig.json
 ├── vitest.config.ts
 ├── README.md

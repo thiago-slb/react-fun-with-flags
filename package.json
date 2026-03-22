@@ -22,8 +22,8 @@
     },
     "scripts": {
         "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
-        "build": "npm run clean && rollup -c",
-        "dev": "rollup -c -w",
+        "build": "npm run clean && rollup -c rollup.config.mjs",
+        "dev": "rollup -c rollup.config.mjs -w",
         "playground": "vite --config playground/example/vite.config.ts",
         "playground:build": "vite build --config playground/example/vite.config.ts",
         "test": "vitest --run",
