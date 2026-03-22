@@ -22,19 +22,12 @@ export const FeatureFlagsProvider = ({
   children,
   warnOnMissing = true,
 }: FeatureFlagsProviderProps) => {
-  const [flags, setFlags] = useState<FeatureFlagsMap>(controlledFlags ?? initialFlags);
+  const [loadedFlags, setLoadedFlags] = useState<FeatureFlagsMap>(initialFlags);
   const [state, setState] = useState<FeatureFlagsProviderState>({
     isLoading: false,
     error: null,
   });
-
-  useEffect(() => {
-    if (!controlledFlags) {
-      return;
-    }
-
-    setFlags(controlledFlags);
-  }, [controlledFlags]);
+  const flags = controlledFlags ?? loadedFlags;
 
   useEffect(() => {
     if (!loadFlags) {
@@ -52,7 +45,7 @@ export const FeatureFlagsProvider = ({
           return;
         }
 
-        setFlags(nextFlags);
+        setLoadedFlags(nextFlags);
         setState({ isLoading: false, error: null });
       } catch (error) {
         if (!active) {
