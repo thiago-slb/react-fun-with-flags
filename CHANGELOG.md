@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.2.0
+
+### Minor Changes
+
+- [`4d7ed5b`](https://github.com/thiago-slb/react-fun-with-flags/commit/4d7ed5b1b4e7aff78808b74817ea5d59f8ae270e) Thanks [@thiago-slb](https://github.com/thiago-slb)! - Prepare library for production/open source use:
+  - add async flag loading options (`loadFlags`, `refreshIntervalMs`, `onLoadError`) and `useFeatureFlagsState`
+  - expand tests to cover runtime updates, nested gates, and async loading/error
+  - add type tests with `tsd`
+  - harden package/release setup (peer deps, pack checks, Changesets, release workflow)
+  - add governance docs and improve README with SSR/migration/FAQ guidance
+  - upgrade CI to matrix + lint/type + pack/audit checks
+
+### Patch Changes
+
+- [`4d7ed5b`](https://github.com/thiago-slb/react-fun-with-flags/commit/4d7ed5b1b4e7aff78808b74817ea5d59f8ae270e) Thanks [@thiago-slb](https://github.com/thiago-slb)! - Initial version :)
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
