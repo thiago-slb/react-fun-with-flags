@@ -118,7 +118,7 @@ describe('feature flags API', () => {
     const loadFlags = vi.fn().mockResolvedValue({ checkoutV2: true });
 
     render(
-      <FeatureFlagsProvider flags={{ checkoutV2: false }} loadFlags={loadFlags}>
+      <FeatureFlagsProvider initialFlags={{ checkoutV2: false }} loadFlags={loadFlags}>
         <HookProbe featureName="checkoutV2" />
         <ProviderStateProbe />
       </FeatureFlagsProvider>
